@@ -1,0 +1,14 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LuaLS/vscode-lua/master/setting/schema.json",
+  "runtime.version": "Lua 5.3",
+  "workspace.library": [
+    "path/to/my/custom/library",
+    "${3rd}/love2d/library"
+  ],
+  "diagnostics.globals": [
+    "vim",
+    "myGlobalVariable"
+  ],
+  "hint.enable": true,
+  "format.enable": true
+}
