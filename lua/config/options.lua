@@ -4,7 +4,9 @@ vim.opt.tabstop = 4
 vim.opt.fileformat = 'unix'
 vim.opt.smarttab = true
 vim.opt.expandtab = true
--- vim.opt.autoindent = true
+vim.opt.shiftwidth = 4
+vim.opt.autoindent = true
+vim.opt.smartindent = true
 
 -- UTF-8 support
 vim.opt.encoding = 'utf-8'
