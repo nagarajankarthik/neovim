@@ -8,7 +8,7 @@ return {
                 ensure_installed = { "c", "cpp", "python",  "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline", "bash", "tmux" },
                 auto_install = true,
                 highlight = { enable = true },
-                indent = { enable = true },
+                indent = { enable = false },
         })
         end
 }
