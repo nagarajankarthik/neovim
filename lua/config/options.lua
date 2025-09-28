@@ -1,6 +1,6 @@
 -- Editor settings
 -- Indentation and tabs
-vim.opt.tabstop = 2
+vim.opt.tabstop = 4
 vim.opt.fileformat = 'unix'
 vim.opt.smarttab = true
 vim.opt.expandtab = true
