@@ -28,6 +28,13 @@ vim.opt.splitright = true
 -- AutoComplete
 vim.opt.completeopt = { "menuone", "noselect", "popup" }
 
+-- Search
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
+-- Search highlight
+vim.opt.hlsearch = false
+
 -- Diagnostics
 vim.diagnostic.config({
         virtual_text = true,
