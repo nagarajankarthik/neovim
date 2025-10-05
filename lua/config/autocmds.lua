@@ -64,7 +64,7 @@ end
 -- Create an augroup so it can be easily cleared/reloaded
 local group = vim.api.nvim_create_augroup("LspDiagnosticsEcho", { clear = true })
 
-vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
+vim.api.nvim_create_autocmd({ "CursorHold"}, {
         group = group,
         callback = function()
                 EchoLineDiagnostics()
