@@ -1,6 +1,10 @@
 return {
 	'junegunn/fzf',
 	'junegunn/fzf.vim',
+    keys = {
+        { "<C-f>", "<cmd>Files<CR>", desc = "File search"},
+        { "<C-p>", "<cmd>Rg<CR>", desc = "Keyword search"}
+    },
     config = function()
         -- Configure fzf actions
         vim.g.fzf_action = {
