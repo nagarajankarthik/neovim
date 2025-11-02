@@ -2,6 +2,7 @@
 -- Keymaps for fzf
 vim.keymap.set("n", "<C-f>", ":Files<CR>", {noremap = true, silent = true})
 vim.keymap.set("n", "<C-p>", ":Rg<CR>", {noremap = true, silent = true})
+vim.keymap.set("n", "<leader>w", ":Rg<C-R><C-W><CR>", {noremap = true, silent = true})
 
 -- Keymaps for Window navigation
 vim.keymap.set("n", "<C-h>", "<C-w>h", { noremap = true, silent = true })
