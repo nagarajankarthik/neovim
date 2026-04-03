@@ -32,3 +32,14 @@ git clone https://github.com/nagarajankarthik/neovim.git .
 nvim init.lua
 ```
 
+# Troubleshooting
+
+According to Gemini, the Neovim AppImage uses FUSE (Filesystem in Userspace) to mount its internal contents to a temporary directory. This temporary directory is usually located in `/tmp` and is automatically unmounted and deleted once the application process ends (i.e. when Neovim is closed). On some clusters, including GCP, running `df -h` might show the `nvim` partition as being full. Also, running `df -i` would show that its inodes are exhausted. In such cases, one can launch Neovim by extracting the AppImage and running it from the extracted directory.
+
+Assuming the AppImage has been extracted to the current directory, one can run Neovim as follows:
+```bash
+./nvim-linux-x86_64.appimage --appimage-extract
+./squashfs-root/AppRun --version
+./squashfs-root/AppRun
+ln -sf squashfs-root/AppRun ~/.local/bin/nvim
+```
