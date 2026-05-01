@@ -25,6 +25,33 @@ vim.lsp.config["clangd"] = {
         filetypes = { 'h', 'c', 'cpp' },
 }
 
+vim.lsp.config["pyright"] = {
+    cmd = { "pyright-langserver", "--stdio" },
+    filetypes = { "python" },
+    root_markers = { "pyrightconfig.json", "setup.py", "setup.cfg", "pyproject.toml", "requirements.txt", ".git" },
+    settings = {
+        python = {
+            analysis = {
+                autoSearchPaths = true,
+                diagnosticMode = "workspace",
+                useLibraryCodeForTypes = true
+            },
+        },
+    },
+}
+
+vim.lsp.config["ruff"] = {
+    cmd = { "ruff", "server" },
+    filetypes = { "python" },
+    root_markers = { "pyproject.toml", "ruff.toml", ".git" },
+    init_options = {
+        settings = {
+            -- Any extra CLI arguments for ruff go here
+            args = {},
+        }
+    }
+}
+
 vim.lsp.config("*", {
         capabilities = vim.lsp.protocol.make_client_capabilities()
 })
